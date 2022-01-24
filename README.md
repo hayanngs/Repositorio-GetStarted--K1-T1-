@@ -1,15 +1,17 @@
 ## Funcionamento do Git
 
-**Working Directory (untracked ou não rastreado)**: É antes de adicionar a alteração ao 
-controle de versão, são os arquivos **modificados**, **excluídos** ou **adicionados**.
+**Working Directory (untracked ou não rastreado)**: 
+-É antes de adicionar a alteração ao controle de versão, são os arquivos **modificados**, **excluídos** ou **adicionados**.
 
 Após o comando `git add` a alteração é adicionada ao **staged**.
 
-**Staging Area (staged)**: São os arquivos preparados para serem versionados.
+**Staging Area (staged)**: 
+-São os arquivos preparados para serem versionados.
 
-Os arquivos em **staged** já podem ser "commitados" pelo comando `git commit`.
+-Os arquivos em **staged** já podem ser "commitados" pelo comando `git commit`.
 
-**Committed**: São as alterações salvas
+**Committed**: 
+-São as alterações salvas
 
 ## Configurações do usuário
 Seta o seu nome de usuário nas configurações global.
@@ -62,8 +64,8 @@ $ git commit -a -m "Mensagem"
 $ git commit --amend
 ```
 > Nota: `-m` é um parâmetro usado para adicionar uma descrição ao commit.
-> Nota: `-a` é o mesma função do `git add` já direto no commit.
-> Nota: `--amend` inclui alterações que estão em staged ao último commit feito localmente
+Nota: `-a` é o mesma função do `git add` já direto no commit.
+Nota: `--amend` inclui alterações que estão em staged ao último commit feito localmente
 
 ## Visualizar alterações
 Mostra a diferença entre o repositório de trabalho e o último commit.
@@ -89,30 +91,30 @@ $ git log --graph
 $ git log --oneline
 ```
 > Nota: `-n` Listagem limitada a N commits. 
-> Nota: `-p` Mostra as mudanças de cada arquivo de acordo com o commit. É como se fosse um `git diff` em cada commit. 
-> Nota: `--stat` Mostra a quantidade de alterações em cada arquivo em formato visual, sem mostrar as mudanças específicas. 
-> Nota: `--shortstat` Mostra somente a quantidade de alteração de forma menos visual que `--stat`. 
-> Nota: `--name-only` Mostra a lista de arquivos modificados em cada commit. 
-> Nota: `--name-status` Mostra a lista de arquivos modificados em cada commit e para cada arquivo mostra as letras M, A ou D. M - Arquivo modificado A - Arquivo adicionado D - Arquivo removido .
-> Nota: `--abbrev-commit` Faz exatamente igual ao comando `git log`, porém mostra somente poucos caracteres do commit, ao invés de todos os 40.
-> Nota: `--relative-date` Mostra os commits com a data relativa comparado a data do dia atual. Ao invés de mostrar a data em que foi feita, mostra quanto tempo atrás foi feito. Por exemplo, "8 semanas atrás", "2 dias atrás".
-> Nota: `--graph` Mostra a lista de commits juntamente com alguns caracteres no início da linha que mostram quando uma branch surgiu e quando houve um merge. 
-> Nota: `--oneline` Faz a listagem de commits mostrando o hash abreviado e a mensagem usada para o commit. Além disso, como o nome já diz, cada commit é mostrado em somente uma linha. 
+Nota: `-p` Mostra as mudanças de cada arquivo de acordo com o commit. É como se fosse um `git diff` em cada commit. 
+Nota: `--stat` Mostra a quantidade de alterações em cada arquivo em formato visual, sem mostrar as mudanças específicas. 
+Nota: `--shortstat` Mostra somente a quantidade de alteração de forma menos visual que `--stat`. 
+Nota: `--name-only` Mostra a lista de arquivos modificados em cada commit. 
+Nota: `--name-status` Mostra a lista de arquivos modificados em cada commit e para cada arquivo mostra as letras M, A ou D. M - Arquivo modificado A - Arquivo adicionado D - Arquivo removido .
+Nota: `--abbrev-commit` Faz exatamente igual ao comando `git log`, porém mostra somente poucos caracteres do commit, ao invés de todos os 40.
+Nota: `--relative-date` Mostra os commits com a data relativa comparado a data do dia atual. Ao invés de mostrar a data em que foi feita, mostra quanto tempo atrás foi feito. Por exemplo, "8 semanas atrás", "2 dias atrás".
+Nota: `--graph` Mostra a lista de commits juntamente com alguns caracteres no início da linha que mostram quando uma branch surgiu e quando houve um merge. 
+Nota: `--oneline` Faz a listagem de commits mostrando o hash abreviado e a mensagem usada para o commit. Além disso, como o nome já diz, cada commit é mostrado em somente uma linha. 
 
 Também é possível informar o seu próprio formato através do parâmetro `--pretty.:format`.
 > Exemplo: `git log --pretty=format:"%h - %p: Feito por %an"` 
-> Exemplo: `git log --pretty=format:"%h: %ar - (%ae) %an"` 
+Exemplo: `git log --pretty=format:"%h: %ar - (%ae) %an"` 
 
 O comando `git log --oneline` pode ser escrito da seguinte maneira: `git log --pretty=format:"%h %s"`.
 
 > `%H` Mostra o hash do commit. 
-> `%h` Mostra o hash do commit abreviado. 
-> `%P` Mostra o hash do commit anterior. 
-> `%p` Mostra o hash do commit do commit anterior abreviado. 
-> `%an` Mostra o nome do autor do commit. 
-> `%ae` Mostra o e-mail do autor do commit. 
-> `%ar` Mostra a data relativa ao dia de hoje. Há quanto tempo atrás a alteração foi feita. 
-> `%s` Mostra o comentário realizado no commit. 
+`%h` Mostra o hash do commit abreviado. 
+`%P` Mostra o hash do commit anterior. 
+`%p` Mostra o hash do commit do commit anterior abreviado. 
+`%an` Mostra o nome do autor do commit. 
+`%ae` Mostra o e-mail do autor do commit. 
+`%ar` Mostra a data relativa ao dia de hoje. Há quanto tempo atrás a alteração foi feita. 
+`%s` Mostra o comentário realizado no commit. 
 
 
 
