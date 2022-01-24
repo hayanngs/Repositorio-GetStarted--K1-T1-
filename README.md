@@ -98,7 +98,9 @@ Nota: `--abbrev-commit` Faz exatamente igual ao comando `git log`, porém mostra
 Nota: `--relative-date` Mostra os commits com a data relativa comparado a data do dia atual. Ao invés de mostrar a data em que foi feita, mostra quanto tempo atrás foi feito. Por exemplo, "8 semanas atrás", "2 dias atrás".  
 Nota: `--graph` Mostra a lista de commits juntamente com alguns caracteres no início da linha que mostram quando uma branch surgiu e quando houve um merge.  
 Nota: `--oneline` Faz a listagem de commits mostrando o hash abreviado e a mensagem usada para o commit. Além disso, como o nome já diz, cada commit é mostrado em somente uma linha.  
-Também é possível informar o seu próprio formato através do parâmetro `--pretty.:format`.
+
+
+> Também é possível informar o seu próprio formato através do parâmetro `--pretty.:format`.  
 > Exemplo: `git log --pretty=format:"%h - %p: Feito por %an"`  
 Exemplo: `git log --pretty=format:"%h: %ar - (%ae) %an"`  
 
