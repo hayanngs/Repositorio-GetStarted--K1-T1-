@@ -2,12 +2,10 @@
 
 **Working Directory (untracked ou não rastreado)**:  
 - É antes de adicionar a alteração ao controle de versão, são os arquivos **modificados**, **excluídos** ou **adicionados**.
-
-Após o comando `git add` a alteração é adicionada ao **staged**.
+- Após o comando `git add` a alteração é adicionada ao **staged**.
 
 **Staging Area (staged)**:  
 - São os arquivos preparados para serem versionados.
-
 - Os arquivos em **staged** já podem ser "commitados" pelo comando `git commit`.
 
 **Committed**: 
@@ -100,7 +98,6 @@ Nota: `--abbrev-commit` Faz exatamente igual ao comando `git log`, porém mostra
 Nota: `--relative-date` Mostra os commits com a data relativa comparado a data do dia atual. Ao invés de mostrar a data em que foi feita, mostra quanto tempo atrás foi feito. Por exemplo, "8 semanas atrás", "2 dias atrás".  
 Nota: `--graph` Mostra a lista de commits juntamente com alguns caracteres no início da linha que mostram quando uma branch surgiu e quando houve um merge.  
 Nota: `--oneline` Faz a listagem de commits mostrando o hash abreviado e a mensagem usada para o commit. Além disso, como o nome já diz, cada commit é mostrado em somente uma linha.  
-
 Também é possível informar o seu próprio formato através do parâmetro `--pretty.:format`.
 > Exemplo: `git log --pretty=format:"%h - %p: Feito por %an"`  
 Exemplo: `git log --pretty=format:"%h: %ar - (%ae) %an"`  
@@ -222,10 +219,10 @@ $ git branch -m <nome da branch a ser renomeada> <novo nome>
 ```
 ## Renomear branch remota
 Não existe um comando específico, tem que apagar a do servidor e dar push de novo. 
-1. `git pull` para trazer a branch atualizada
-2. `git branch -m <novo nome>` para renomear a branch
-3. `git push --delete <branch a ser renomeada>` para remover a branch do repositório remoto
-4. `git push -u origin <novo nome>` push da branch renomeada para o repositório remoto
+1. `git pull` para trazer a branch atualizada  
+2. `git branch -m <novo nome>` para renomear a branch  
+3. `git push --delete <branch a ser renomeada>` para remover a branch do repositório remoto  
+4. `git push -u origin <novo nome>` push da branch renomeada para o repositório remoto  
 
 ## Mesclando alterações
 ```
@@ -256,10 +253,10 @@ $ git config --global --add merge.tool.kdiff3.trustExitCode false
 ```
 
 ## Exemplo de SCM(Source Code Management
->tags: Marca a versão estável da master
-branch master: É uma versão estável do sistema
-branch develop: É criado a partir da master para desenvolver e testar features
-branch features: É onde se desenvolve sem garantias de que estabilidade.
+>tags: Marca a versão estável da master  
+branch master: É uma versão estável do sistema  
+branch develop: É criado a partir da master para desenvolver e testar features  
+branch features: É onde se desenvolve sem garantias de que estabilidade.  
 
 
 ## Pull Request
@@ -304,9 +301,9 @@ $ git push --delete origin <nome da tag no remoto>
 ## Tag em commits antigos
 
 Primeira maneira
-1. Faz checkout no commit antigo
-2. Cria a tag
-3. Push da tag
+1. Faz checkout no commit antigo  
+2. Cria a tag  
+3. Push da tag  
 
 Segunda maneira
 1. Descrito na criação da tag
